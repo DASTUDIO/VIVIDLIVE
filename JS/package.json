@@ -1,0 +1,36 @@
+{
+    "name": "vividlive",
+    "version": "1.1.2",
+    "main": "www/lib/index.js",
+    "types": "./www/lib/index.d.ts",
+    "files": [
+        "www/lib/"
+    ],
+    "scripts": {
+        "dev": "vite www",
+        "prebuild": "rm -rf dist lib",
+        "build": "vite build && npm run build:lib",
+        "build:lib": "tsc -p .",
+        "serve": "vite",
+        "prepare": "npm run build",
+        "fmt": "prettier --write 'src/**/*.ts'"
+    },
+    "dependencies": {
+        "fast-json-stringify": "^2.7.12",
+        "ws": "^8.4.0"
+    },
+    "devDependencies": {
+        "prettier": "^2.4.1",
+        "rollup-plugin-friendly-type-imports": "^1.0.1",
+        "typescript": "^4.4.4",
+        "vite": "^2.6.0",
+        "vite-plugin-banner": "0.1.3",
+        "vite-plugin-ts": "^1.1.8"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "trailingComma": "es5",
+        "printWidth": 120,
+        "singleQuote": false
+    }
+}

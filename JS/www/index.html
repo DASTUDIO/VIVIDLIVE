@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- HTML Meta Tags -->
+  <title>VIVID Live</title>
+
+  <!--     Mediapipe or Tensorflow.js -->
+  <script src="holistic.js" crossorigin="anonymous">
+  </script>
+
+  <!--     Mediapipe Drawing Tools -->
+  <script src="drawing_utils.js" crossorigin="anonymous"></script>
+  <!--     Mediapipe Camera Tools -->
+  <script src="camera_utils.js" crossorigin="anonymous"></script>
+
+  <!-- <script src="https://unpkg.com/slow-json-stringify/dist/sjs.umd.js"></script> -->
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="preview">
+    <video class="input_video" style="visibility: hidden;"></video>
+    <canvas class="guides"></canvas>
+  </div>
+  <div class="ctl">
+    <textarea id="zcode" type="text">print('Hello, ', @this.name)</textarea>
+    <button id="run">Run</button>
+  </div>
+  <script src="./script.js" type="module" defer></script>
+</body>
+
+</html>

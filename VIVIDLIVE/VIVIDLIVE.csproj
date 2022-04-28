@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{927ACD1D-FD60-4D6D-85B3-3CF818516B19}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>VIVIDLIVE</RootNamespace>
+        <AssemblyName>VIVIDLIVE</AssemblyName>
+        <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="VExpHotKey.cs" />
+        <Compile Include="VUDPInvoker.cs" />
+        <Compile Include="FaceSetter.cs" />
+        <Compile Include="VIVIDLive.cs" />
+        <Compile Include="PoseSetter.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Reference Include="Antlr4.Runtime.Standard">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Antlr4.Runtime.Standard.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Beautify.Universal.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Beautify.Universal.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="FastSpringBone">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\FastSpringBone.dll</HintPath>
+      </Reference>
+      <Reference Include="HSVPicker">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\HSVPicker.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\I18N.dll</HintPath>
+      </Reference>
+      <Reference Include="I18N.CJK">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\I18N.CJK.dll</HintPath>
+      </Reference>
+      <Reference Include="ICSharpCode.SharpZipLib">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+      </Reference>
+      <Reference Include="IxMilia.ThreeMf">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\IxMilia.ThreeMf.dll</HintPath>
+      </Reference>
+      <Reference Include="LibTessDotNet">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\LibTessDotNet.dll</HintPath>
+      </Reference>
+      <Reference Include="Mono.Security">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Mono.Security.dll</HintPath>
+      </Reference>
+      <Reference Include="mscorlib">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\mscorlib.dll</HintPath>
+      </Reference>
+      <Reference Include="MToon">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\MToon.dll</HintPath>
+      </Reference>
+      <Reference Include="netstandard">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\netstandard.dll</HintPath>
+      </Reference>
+      <Reference Include="Newtonsoft.Json">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Newtonsoft.Json.dll</HintPath>
+      </Reference>
+      <Reference Include="nunit.framework">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\nunit.framework.dll</HintPath>
+      </Reference>
+      <Reference Include="ScreenSpaceReflections">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\ScreenSpaceReflections.dll</HintPath>
+      </Reference>
+      <Reference Include="SimpleFileBrowser.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\SimpleFileBrowser.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="StbImageSharp">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\StbImageSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="System">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.dll</HintPath>
+      </Reference>
+      <Reference Include="System.ComponentModel.Composition">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.ComponentModel.Composition.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Configuration">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Configuration.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Core">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Data">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Data.DataSetExtensions">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Data.DataSetExtensions.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Drawing">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Drawing.dll</HintPath>
+      </Reference>
+      <Reference Include="System.EnterpriseServices">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.EnterpriseServices.dll</HintPath>
+      </Reference>
+      <Reference Include="System.IO.Compression">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.IO.Compression.dll</HintPath>
+      </Reference>
+      <Reference Include="System.IO.Compression.FileSystem">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.IO.Compression.FileSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Net.Http">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Net.Http.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Numerics">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Numerics.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Runtime.Serialization">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Runtime.Serialization.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Security">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Security.dll</HintPath>
+      </Reference>
+      <Reference Include="System.ServiceModel.Internals">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.ServiceModel.Internals.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Transactions">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Transactions.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Xml.dll</HintPath>
+      </Reference>
+      <Reference Include="System.Xml.Linq">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\System.Xml.Linq.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.Fbx">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.Fbx.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.Gltf">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.Gltf.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.Gltf.Draco">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.Gltf.Draco.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.HDRLoader">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.HDRLoader.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.Obj">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.Obj.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.Ply">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.Ply.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.Stl">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.Stl.dll</HintPath>
+      </Reference>
+      <Reference Include="TriLibCore.ThreeMf">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\TriLibCore.ThreeMf.dll</HintPath>
+      </Reference>
+      <Reference Include="UniGLTF">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UniGLTF.dll</HintPath>
+      </Reference>
+      <Reference Include="UniGLTF.Samples.ScreenSpace">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UniGLTF.Samples.ScreenSpace.dll</HintPath>
+      </Reference>
+      <Reference Include="UniHumanoid">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UniHumanoid.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.Burst.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.Burst.Cecil.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil.Mdb">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.Burst.Cecil.Mdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil.Pdb">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.Burst.Cecil.Pdb.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Cecil.Rocks">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.Burst.Cecil.Rocks.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.Burst.Unsafe.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.Mathematics">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.Mathematics.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Core.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      </Reference>
+      <Reference Include="Unity.TextMeshPro">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AccessibilityModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AIModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AndroidJNIModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AnimationModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ARModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AssetBundleModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AudioModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.AutoStreamingModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.AutoStreamingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClothModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterInputModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ClusterRendererModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CrashReportingModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DirectorModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.DSPGraphModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GameCenterModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GIModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.GIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.GridModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.HotReloadModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ImageConversionModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.IMGUIModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputLegacyModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.JSONSerializeModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.LocalizationModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.NVIDIAModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.NVIDIAModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ParticleSystemModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PerformanceReportingModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.Physics2DModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.PhysicsModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ProfilerModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ScreenCaptureModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SharedInternalsModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteMaskModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SpriteShapeModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.StreamingModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubstanceModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.SubsystemsModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TerrainPhysicsModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreFontEngineModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextCoreTextEngineModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TextRenderingModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TilemapModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.TLSModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UI">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UI.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIElementsNativeModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UIModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UmbraModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UNETModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityAnalyticsModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityConnectModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityCurlModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityTestProtocolModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VehiclesModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VFXModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VideoModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VirtualTexturingModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.VRModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.WindModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.XRModule">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+      </Reference>
+      <Reference Include="VRM">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRM.dll</HintPath>
+      </Reference>
+      <Reference Include="VRM.Samples.AnimationBridgeSample">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRM.Samples.AnimationBridgeSample.dll</HintPath>
+      </Reference>
+      <Reference Include="VRM.Samples.FirstPersonSample">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRM.Samples.FirstPersonSample.dll</HintPath>
+      </Reference>
+      <Reference Include="VRM.Samples.RuntimeExporterSample">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRM.Samples.RuntimeExporterSample.dll</HintPath>
+      </Reference>
+      <Reference Include="VRM.Samples.SimpleViewer">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRM.Samples.SimpleViewer.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.GLTF.IO.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRMShaders.GLTF.IO.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.GLTF.UniUnlit.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRMShaders.GLTF.UniUnlit.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.VRM.IO.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRMShaders.VRM.IO.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.VRM10.Format.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRMShaders.VRM10.Format.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="VRMShaders.VRM10.MToon10.Runtime">
+        <HintPath>D:\HDVIVID\VIVID HD_Data\Managed\VRMShaders.VRM10.MToon10.Runtime.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

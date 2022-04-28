@@ -1,0 +1,5 @@
+1. npm install
+
+2. node ws.js
+
+3. vite www (another terminal window)
